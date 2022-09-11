@@ -57,18 +57,17 @@ export const App = () => {
       <GlobalStyle />
       <Searchbar onSubmit={onSubmit} />
       <ImageGallery>
-        {response &&
-          response.map(({ id, webformatURL, tags, largeImageURL }) => {
-            return (
-              <ImageGalleryItem
-                onClickShowModal={onClickShowModal}
-                key={id}
-                originalUrl={largeImageURL}
-                url={webformatURL}
-                name={tags}
-              />
-            );
-          })}
+        {response?.map(({ id, webformatURL, tags, largeImageURL }) => {
+          return (
+            <ImageGalleryItem
+              onClickShowModal={onClickShowModal}
+              key={id}
+              originalUrl={largeImageURL}
+              url={webformatURL}
+              name={tags}
+            />
+          );
+        })}
       </ImageGallery>
       {isLoading && <Loader />}
       {response.length > 0 && <Button loadMore={increasePage} />}
