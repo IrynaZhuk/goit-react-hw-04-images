@@ -2,7 +2,7 @@ import axios from 'axios';
 
 export const getPictures = async (request, page) => {
   const searchParams = new URLSearchParams({
-    key: '28408221-8884b414615b22bda0ca1828e',
+    key: '27957885-8dff7fee3c243073fce7c6825',
     q: request,
     image_type: 'photo',
     orientation: 'horizontal',
